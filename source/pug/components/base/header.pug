@@ -3,15 +3,30 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Доставка топлива",
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Топливные карты",
+        icon: true,
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "АЗС",
+        icon: true,
+      },
+      {
+        href: "#",
+        text: "Цены на топливо",
+      },
+      {
+        href: "#",
+        text: "О компании",
+        icon: true,
+      },
+      {
+        href: "#",
+        text: "Контакты",
       },
     ]
 
@@ -19,18 +34,32 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
+      nav.main-nav.main-nav--top
+        a.main-nav__link.main-nav__link--phone(href="tel:+74951234567")
+          +icon("icon-phone", 20, 20)
+          | 8 (495) 127-82-80
+        a.main-nav__link(href="#") Напишите нам
+        a.main-nav__link(href="#")
+          +icon("icon-user", 20, 20)
+          | Личный кабинет
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+    nav.main-nav.main-nav--bottom
+      .container
+        ul.main-nav__list
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__item
+
+              if(activeState)
+                span.main-nav__link.is-active=link.text
+              else
+                a.main-nav__link(href=link.href)=link.text
+                  if(link.icon)
+                    +icon("icon-arrow", 20, 20)
+

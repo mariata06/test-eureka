@@ -1,10 +1,11 @@
 .header {
-  padding: 28px 0;
+  padding: 8px 0 0;
 
-  background-color: $color-neon-blue;
+  background-color: $color-default-white;
 
   .container {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__logo {

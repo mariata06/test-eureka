@@ -1,0 +1,13 @@
+mixin step(step)
+  .step
+    .step__icon-wrapper
+      .step__icon
+        +icon(step.iconName, step.iconWidth, step.iconHeight)
+      .step__time !{step.time}
+        if(step.timeArrow)
+          +icon("icon-arrow-right", 59, 14)
+    h3.step__title.title--h3 !{step.title}
+    .step__desc
+      each item in step.paragraph
+        .step__paragraph !{item}
+        //- !{step.paragraph}
