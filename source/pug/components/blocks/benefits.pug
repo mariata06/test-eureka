@@ -1,0 +1,59 @@
+mixin benefits
+  -
+    const benefits = [
+      {
+        title: "Качество топлива",
+        paragraph: "Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.",
+        iconName: "icon-certificate",
+        iconWidth: 48,
+        iconHeight: 48,
+      },
+      {
+        title: "Бережем ваше время и нервы",
+        paragraph: "Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.",
+        iconName: "icon-clock",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
+      {
+        title: "Цена",
+        paragraph: "Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.",
+        iconName: "icon-rouble",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
+      {
+        title: "Ваш комфорт—наша забота",
+        paragraph: "Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.",
+        iconName: "icon-place",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
+      {
+        title: "Безопасность процесса",
+        paragraph: "Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.",
+        iconName: "icon-shield",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
+      {
+        title: "Несколько ТС в одном месте?",
+        paragraph: "Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.",
+        iconName: "icon-way",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
+    ]
+
+  section.benefits
+    .container
+      h2.benefits__title.title.title--h2 Преимущества сервиса
+      .benefits__list
+        each item in benefits
+          .benefits__item
+            .benefits__item-icon
+              +icon(item.iconName, item.iconWidth, item.iconHeight)
+            .benefits__item-wrapper
+              h3.benefits__item-title.title.title--h3 !{item.title}
+              .benefits__item-paragraph !{item.paragraph}
+
