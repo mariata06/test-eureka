@@ -1,0 +1,47 @@
+mixin documents
+  -
+    const slides = [
+      {
+        path: "slides",
+        image: "img-certificate1",
+        format: "png",
+        width: "217",
+        height: "301",
+      },
+      {
+        path: "slides",
+        image: "img-certificate2",
+        format: "png",
+        width: "217",
+        height: "301",
+      },
+      {
+        path: "slides",
+        image: "img-certificate3",
+        format: "png",
+        width: "217",
+        height: "301",
+      },
+      {
+        path: "slides",
+        image: "img-certificate4",
+        format: "png",
+        width: "217",
+        height: "301",
+      },
+    ]
+
+  section.documents
+    .container
+      h2.documents__title.title.title--h2 Сертификаты качества топлива
+      .documents__slider.swiper
+        .documents__slider-container.swiper-container
+          .documents__slider-wrapper.swiper-wrapper
+            each slide in slides
+              .documents__slider-slide.swiper-slide
+                +img(slide.path, slide.image, slide.format, slide.width, slide.height, slide.altText)
+          .documents__slider-nav
+            button(type="button").documents__slide-prev.swiper-button-prev
+              +icon("icon-arrow", 32, 32)
+            button(type="button").documents__slide-next.swiper-button-next
+              +icon("icon-arrow", 32, 32)
