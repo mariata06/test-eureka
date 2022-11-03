@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 import {initCertSlider} from './modules/init-cert-slider';
+import {initPartnersSlider} from './modules/init-partners-slider';
+import {initReviewSlider} from './modules/init-review-slider';
 
 // ---------------------------------
 
@@ -13,6 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initCertSlider();
+  initPartnersSlider();
+  initReviewSlider();
 
   // Modules
   // ---------------------------------

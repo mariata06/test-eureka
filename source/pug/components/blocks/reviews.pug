@@ -1,0 +1,33 @@
+mixin reviews
+  -
+    const slides = [
+      {
+        author: "Гусев Вячеслав",
+        post: "Индивидуальный предприниматель",
+        text: "Velit, lectus sit urna tincidunt augue. Cursus vulputate pellentesque faucibus euismod. Diam pharetra, non, ut integer dui feugiat porttitor at. Non, dignissim enim viverra fringilla sit. Etiam justo a dignissim sociis vitae, nisi, justo, feugiat.",
+      },
+       {
+        author: "Зеленов Евгений",
+        post: "Гененеральный директор трансопртной компании",
+        text: "Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.",
+      },
+    ]
+
+  section.reviews
+    .container
+      h2.reviews__title.title.title--h2 Отзывы
+      .reviews__slider.swiper
+        .reviews__slider-container.swiper-container
+          .reviews__slider-wrapper.swiper-wrapper
+            each slide in slides
+              .reviews__slider-slide.swiper-slide
+                p.reviews__author !{slide.author}
+                p.reviews__post !{slide.post}
+                p.reviews__text !{slide.text}
+                a(href="#").reviews__slide-link Подробнее
+          .reviews__slider-nav
+            button(type="button").reviews__slide-prev.swiper-button-prev.btn--slide-prev.btn
+              +icon("icon-arrow", 32, 32)
+            button(type="button").reviews__slide-next.swiper-button-next.btn--slide-next.btn
+              +icon("icon-arrow", 32, 32)
+          button(type="button").reviews__btn-more.btn.btn--blue-bg Читать все отзывы

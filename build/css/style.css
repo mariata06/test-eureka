@@ -1732,7 +1732,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 0;
   color: #ffffff;
   background-color: #2c39f2;
   border: none;
@@ -1753,6 +1753,46 @@ button,
 
 .btn.focus-visible:focus {
   opacity: 0.8;
+}
+
+.btn--slide-next,
+.btn--slide-prev {
+  background-color: transparent;
+  border: 1px solid #d4d4d4;
+  position: unset;
+  left: unset;
+  right: unset;
+  width: 56px;
+  height: 56px;
+}
+
+.btn--slide-next svg,
+.btn--slide-prev svg {
+  width: 32px;
+  height: 32px;
+}
+
+.btn--slide-next:after,
+.btn--slide-prev:after {
+  display: none;
+}
+
+.btn--slide-prev svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.btn--slide-next svg {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.btn--blue-bg {
+  padding: 14px 63px 16px;
+  color: #ffffff;
+  background-color: #098fcf;
 }
 
 .custom-input,
@@ -2362,38 +2402,146 @@ button,
   right: 0;
 }
 
-.documents__slide-prev.swiper-button-prev,
-.documents__slide-next.swiper-button-next {
-  position: unset;
-  left: unset;
-  right: unset;
-  width: 56px;
+.partners {
+  padding-bottom: 100px;
+}
+
+.partners__slide {
+  width: 217px;
+  min-height: 112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-right: 86px;
+}
+
+.partners__slide img {
+  margin: 0 auto;
+}
+
+.partners__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.partners__slider {
+  min-height: 186px;
+}
+
+.partners__container {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.partners__pagination.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.partners__pagination.swiper-pagination .swiper-pagination-bullet {
+  margin: 0 23px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #e7e7e7;
+  opacity: 1;
+}
+
+.partners__pagination.swiper-pagination .swiper-pagination-bullet-active {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: #098fcf;
+}
+
+.reviews {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f9f9f9;
+}
+
+.reviews__slider-slide {
+  width: 545px;
+  padding: 40px;
+  min-height: 368px;
+  background-color: #ffffff;
+  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.reviews__slider-container {
+  position: relative;
+  padding-top: 100px;
+}
+
+.reviews__author {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 18.29px;
+  font-weight: 600;
+}
+
+.reviews__post {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 500;
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: auto;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.reviews__slider-nav {
+  position: absolute;
   height: 56px;
-  background-color: transparent;
-  border: 1px solid #d4d4d4;
+  width: 128px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  top: 30px;
+  right: 0;
 }
 
-.documents__slide-prev.swiper-button-prev svg,
-.documents__slide-next.swiper-button-next svg {
-  width: 32px;
-  height: 32px;
+.reviews__slide-link {
+  color: #098fcf;
+  font-weight: 600;
+  margin-top: auto;
+  display: block;
 }
 
-.documents__slide-prev.swiper-button-prev:after,
-.documents__slide-next.swiper-button-next:after {
-  display: none;
-}
-
-.documents__slide-prev.swiper-button-prev svg {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.documents__slide-next.swiper-button-next svg {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+.reviews__btn-more {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
 }
 
 /* @mixin hover-focus {

@@ -41,7 +41,7 @@ mixin documents
               .documents__slider-slide.swiper-slide
                 +img(slide.path, slide.image, slide.format, slide.width, slide.height, slide.altText)
           .documents__slider-nav
-            button(type="button").documents__slide-prev.swiper-button-prev
+            button(type="button").documents__slide-prev.swiper-button-prev.btn--slide-prev.btn
               +icon("icon-arrow", 32, 32)
-            button(type="button").documents__slide-next.swiper-button-next
+            button(type="button").documents__slide-next.swiper-button-next.btn--slide-next.btn
               +icon("icon-arrow", 32, 32)

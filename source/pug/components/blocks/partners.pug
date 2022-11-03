@@ -1,0 +1,43 @@
+mixin partners
+
+  -
+    const partners = [
+      {
+        path: "slides",
+        image: "logo_lukoil",
+        format: "png",
+        width: "196",
+        height: "52",
+      },
+      {
+        path: "slides",
+        image: "logo_gazpromneft",
+        format: "png",
+        width: "160",
+        height: "77",
+      },
+      {
+        path: "slides",
+        image: "logo_rosneft",
+        format: "png",
+        width: "217",
+        height: "112",
+      },
+      {
+        path: "slides",
+        image: "logo_tatneft",
+        format: "png",
+        width: "202",
+        height: "56",
+      },
+    ]
+  section.partners
+    .container
+      h2.partners__title.title.title--h2 Наши партнеры
+      .partners__slider.swiper
+        .partners__container.swiper-container
+          .partners__wrapper.swiper-wrapper
+            each slide in partners
+              .partners__slide.swiper-slide
+                +img(slide.path, slide.image, slide.format, slide.width, slide.height, slide.altText)
+          .partners__pagination.swiper-pagination

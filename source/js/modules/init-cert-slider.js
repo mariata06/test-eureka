@@ -14,4 +14,4 @@ const initCertSlider = () => {
     });
   };
 
-  export {initCertSlider};
+export {initCertSlider};

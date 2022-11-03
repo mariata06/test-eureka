@@ -1,6 +1,7 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  // padding: 10px 20px;
+  padding: 0;
 
   color: $color-default-white;
 
@@ -22,5 +23,47 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  &--slide-next,
+  &--slide-prev {
+    background-color: transparent;
+    border: 1px solid $color-light-grey;
+    position: unset;
+    left: unset;
+    right: unset;
+    width: 56px;
+    height: 56px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &--slide-prev {
+    svg {
+      transform: rotate(90deg);
+    }
+
+    // &:after {
+    //   display: none;
+    // }
+  }
+
+  &--slide-next {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &--blue-bg {
+    padding: 14px 63px 16px;
+    color: $color-default-white;
+    background-color: $color-pacific-blue;
   }
 }
