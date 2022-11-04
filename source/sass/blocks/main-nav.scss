@@ -52,17 +52,8 @@
 .main-nav--top {
   padding-bottom: 16px;
 
-  .main-nav__link {
+  .main-nav__link--phone {
     color: $color-default-black;
-
-    &:not(.main-nav__link--phone) {
-      font-size: 13px;
-      line-height: 16px;
-      font-weight: 500;
-      color: $color-default-white;
-      background-color: $color-pacific-blue;
-      padding: 14px 36px 16px;
-    }
   }
 }
 

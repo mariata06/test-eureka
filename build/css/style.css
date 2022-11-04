@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1583,17 +1585,8 @@ button,
   padding-bottom: 16px;
 }
 
-.main-nav--top .main-nav__link {
+.main-nav--top .main-nav__link--phone {
   color: #000000;
-}
-
-.main-nav--top .main-nav__link:not(.main-nav__link--phone) {
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #098fcf;
-  padding: 14px 36px 16px;
 }
 
 .main-nav--bottom {
@@ -2542,6 +2535,82 @@ button,
   margin: 0 auto;
   margin-top: 50px;
   display: block;
+}
+
+.price {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.price__title {
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.price table th {
+  color: #ffffff;
+  background-color: #043c77;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+.price table td[data-label=дизель],
+.price table td[data-label=аи-95] {
+  background-color: #098fcf;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  width: 163px;
+  padding: 16px 0 0 20px;
+  vertical-align: top;
+}
+
+.price table td[data-label=класс] {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  width: 300px;
+  padding: 16px 0 0 30px;
+  vertical-align: top;
+  border-right: 1px solid #e7e7e7;
+}
+
+.price table td[data-label=производитель] {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  width: 300px;
+  padding: 16px 0 0 30px;
+  vertical-align: top;
+}
+
+.price table td[data-label=Цена] {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 16px 0 16px 0;
+  vertical-align: top;
+}
+
+.price table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.price table tr {
+  border: 1px solid #e7e7e7;
+}
+
+.price table tr.price__table-empty {
+  height: 20px;
+  border: 0;
+}
+
+.price table tr.price__table-empty td {
+  border: 0;
 }
 
 /* @mixin hover-focus {

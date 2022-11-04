@@ -110,7 +110,7 @@
           <nav class="main-nav main-nav--top"><a class="main-nav__link main-nav__link--phone" href="tel:+74951234567">
               <svg width="20" height="20" aria-hidden="true">
                 <use xlink:href="#icon-phone"></use>
-              </svg>8 (495) 127-82-80</a><a class="main-nav__link" href="#">Напишите нам</a><a class="main-nav__link" href="#">
+              </svg>8 (495) 127-82-80</a><a class="main-nav__link btn btn--blue-bg" href="#">Напишите нам</a><a class="main-nav__link btn btn--blue-bg" href="#">
               <svg width="20" height="20" aria-hidden="true">
                 <use xlink:href="#icon-user"></use>
               </svg>Личный кабинет</a>
@@ -150,14 +150,110 @@
         </nav>
       </header>
       <main>
-        <div class="intro">
+        <section class="price">
           <div class="container">
-            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
-            <p style="margin-top: 40px;">Пример использования +img()</p>
-            <p style="margin-bottom: 40px;"><img src="img/content/placeholder.png" srcset="img/content/placeholder@2x.png 2x" width="120" height="120" alt="Пример">
-            </p>
+            <h2 class="price__title title title--h2">Стоимость топлива</h2>
+            <table class="price__table">
+              <thead>
+                <tr>
+                  <th>Сорт топлива</th>
+                  <th>Экологический класс</th>
+                  <th>Производитель</th>
+                  <th>Наличный расчет</th>
+                  <th>Безналичный расчет</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="price__table-empty">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td data-label="дизель" rowspan="5">ДТ</td>
+                  <td data-label="класс" rowspan="3">ЕВРО-5</td>
+                  <td data-label="производитель">Газпромнефть</td>
+                  <td data-label="Цена">45.43 р.</td>
+                  <td data-label="Цена">44.43 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Роснефть</td>
+                  <td data-label="Цена">42.34 р.</td>
+                  <td data-label="Цена">41.64 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Лукойл</td>
+                  <td data-label="Цена">45.16 р.</td>
+                  <td data-label="Цена">43.98 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="класс" rowspan="2">ЕВРО-4</td>
+                  <td data-label="производитель">Газпромнефть</td>
+                  <td data-label="Цена">-</td>
+                  <td data-label="Цена">-</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Лукойл</td>
+                  <td data-label="Цена">41.16 р.</td>
+                  <td data-label="Цена">40.67 р.</td>
+                </tr>
+                <tr class="price__table-empty">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td data-label="аи-95" rowspan="8">АИ-95</td>
+                  <td data-label="класс" rowspan="3">ЕВРО-5</td>
+                  <td data-label="производитель">Газпромнефть</td>
+                  <td data-label="Цена">45.43 р.</td>
+                  <td data-label="Цена">44.43 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Роснефть</td>
+                  <td data-label="Цена">42.34 р.</td>
+                  <td data-label="Цена">41.64 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Лукойл</td>
+                  <td data-label="Цена">45.16 р.</td>
+                  <td data-label="Цена">43.98 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="класс" rowspan="2">ЕВРО-4</td>
+                  <td data-label="производитель">Лукойл</td>
+                  <td data-label="Цена">41.16 р.</td>
+                  <td data-label="Цена">40.67 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Газпромнефть</td>
+                  <td data-label="Цена">-</td>
+                  <td data-label="Цена">-</td>
+                </tr>
+                <tr>
+                  <td data-label="класс" rowspan="3">ЕВРО-3</td>
+                  <td data-label="производитель">Роснефть</td>
+                  <td data-label="Цена">42.34 р.</td>
+                  <td data-label="Цена">41.64 р.</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Газпромнефть</td>
+                  <td data-label="Цена">-</td>
+                  <td data-label="Цена">-</td>
+                </tr>
+                <tr>
+                  <td data-label="производитель">Лукойл</td>
+                  <td data-label="Цена">45.16 р.</td>
+                  <td data-label="Цена">43.98 р.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
+        </section>
         <section class="steps">
           <div class="container">
             <h2 class="steps__title title title--h2">Как мы работаем</h2>

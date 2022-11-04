@@ -1,0 +1,112 @@
+mixin price
+  section.price
+    .container
+      h2.price__title.title.title--h2 Стоимость топлива
+      table.price__table
+        thead
+          tr
+            each title in ['Сорт топлива','Экологический класс','Производитель', 'Наличный расчет','Безналичный расчет']
+              th=title
+        tbody
+          tr.price__table-empty
+            td
+            td
+            td
+            td
+            td
+          tr
+            td(data-label="дизель" rowspan="5") ДТ
+            td(data-label="класс" rowspan="3") ЕВРО-5
+            td(data-label="производитель") Газпромнефть
+            td(data-label="Цена") 45.43 р.
+            td(data-label="Цена") 44.43 р.
+
+          tr
+            //- td(data-label="дизель") ДТ
+            //- td(data-label="класс") ЕВРО-5
+            td(data-label="производитель") Роснефть
+            td(data-label="Цена") 42.34 р.
+            td(data-label="Цена") 41.64 р.
+
+          tr
+            //- td(data-label="дизель") ДТ
+            //- td(data-label="класс") ЕВРО-5
+            td(data-label="производитель") Лукойл
+            td(data-label="Цена") 45.16 р.
+            td(data-label="Цена") 43.98 р.
+
+          tr
+            //- td(data-label="дизель") ДТ
+            td(data-label="класс" rowspan="2") ЕВРО-4
+            td(data-label="производитель") Газпромнефть
+            td(data-label="Цена") -
+            td(data-label="Цена") -
+
+          tr
+            //- td(data-label="дизель") ДТ
+            //- td(data-label="класс") ЕВРО-4
+            td(data-label="производитель") Лукойл
+            td(data-label="Цена") 41.16 р.
+            td(data-label="Цена") 40.67 р.
+
+          tr.price__table-empty
+            td
+            td
+            td
+            td
+            td
+          tr
+            td(data-label="аи-95" rowspan="8") АИ-95
+            td(data-label="класс" rowspan="3") ЕВРО-5
+            td(data-label="производитель") Газпромнефть
+            td(data-label="Цена") 45.43 р.
+            td(data-label="Цена") 44.43 р.
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            //- td(data-label="класс") ЕВРО-5
+            td(data-label="производитель") Роснефть
+            td(data-label="Цена") 42.34 р.
+            td(data-label="Цена") 41.64 р.
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            //- td(data-label="класс") ЕВРО-5
+            td(data-label="производитель") Лукойл
+            td(data-label="Цена") 45.16 р.
+            td(data-label="Цена") 43.98 р.
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            td(data-label="класс" rowspan="2") ЕВРО-4
+            td(data-label="производитель") Лукойл
+            td(data-label="Цена") 41.16 р.
+            td(data-label="Цена") 40.67 р.
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            //- td(data-label="класс") ЕВРО-4
+            td(data-label="производитель") Газпромнефть
+            td(data-label="Цена") -
+            td(data-label="Цена") -
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            td(data-label="класс" rowspan="3") ЕВРО-3
+            td(data-label="производитель") Роснефть
+            td(data-label="Цена") 42.34 р.
+            td(data-label="Цена") 41.64 р.
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            //- td(data-label="класс") ЕВРО-3
+            td(data-label="производитель") Газпромнефть
+            td(data-label="Цена") -
+            td(data-label="Цена") -
+
+          tr
+            //- td(data-label="аи-95") АИ-95
+            //- td(data-label="класс") ЕВРО-3
+            td(data-label="производитель") Лукойл
+            td(data-label="Цена") 45.16 р.
+            td(data-label="Цена") 43.98 р.

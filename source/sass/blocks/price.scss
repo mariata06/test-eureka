@@ -1,0 +1,77 @@
+.price {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 48px;
+  }
+
+  table th {
+    color: $color-default-white;
+    background-color: $color-dark-cerullean;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    // border: 0;
+    // border-collapse: collapse;
+  }
+
+  table td[data-label="дизель"],
+  table td[data-label="аи-95"] {
+    background-color: $color-pacific-blue;
+    color: $color-default-white;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    width: 163px;
+    padding: 16px 0 0 20px;
+    vertical-align: top;
+  }
+
+  table td[data-label="класс"] {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    width: 300px;
+    padding: 16px 0 0 30px;
+    vertical-align: top;
+    border-right: 1px solid $color-whisper;
+  }
+
+  table td[data-label="производитель"] {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    width: 300px;
+    padding: 16px 0 0 30px;
+    vertical-align: top;
+  }
+
+  table td[data-label="Цена"] {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 16px 0 16px 0;
+    vertical-align: top;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table tr {
+    border: 1px solid $color-whisper;
+  }
+
+  table tr.price__table-empty {
+    height: 20px;
+    border: 0;
+
+    td {
+      border: 0;
+    }
+  }
+}
