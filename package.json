@@ -56,5 +56,8 @@
   },
   "engines": {
     "node": ">=16.15.1"
+  },
+  "dependencies": {
+    "jquery-mask-plugin": "^1.14.16"
   }
 }

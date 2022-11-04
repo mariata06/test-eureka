@@ -1,10 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {initCustomSelect} from './modules/form/init-custom-select';
-import {initFormValidate} from './modules/form/init-form-validate';
+// import {initCustomSelect} from './modules/form/init-custom-select';
+import {initFormValidate} from './modules/init-form-validate';
 import {initCertSlider} from './modules/init-cert-slider';
 import {initPartnersSlider} from './modules/init-partners-slider';
 import {initReviewSlider} from './modules/init-review-slider';
+import {initCustomSelect} from './modules/init-custom-select';
 
 // ---------------------------------
 
@@ -25,8 +26,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    initCustomSelect();
+    // initCustomSelect();
     initFormValidate();
+    // initPhoneValidate();
+    initCustomSelect();
   });
 });
 
