@@ -13,6 +13,34 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 16px;
+
+    label {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    input,
+    input::placeholder {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    input {
+      transition: border $trans-default;
+      outline: none;
+      color: $color-default-black;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid rgba($color-default-black, 0.5);
+      }
+    }
+
+    input::placeholder {
+      color: $color-matterhorn;
+    }
   }
 
   .form__wrapper {
@@ -54,7 +82,6 @@
     table td[data-label="column-name"] {
       width: 70%;
 
-
       p {
         margin: 0;
         margin-top: 16px;
@@ -64,5 +91,14 @@
       }
     }
 
+    table tr td:last-child {
+      text-align: right;
+    }
+
+    td[data-label="profit"] {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+    }
   }
 }

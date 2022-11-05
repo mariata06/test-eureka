@@ -35,6 +35,10 @@
     width: 56px;
     height: 56px;
 
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
     svg {
       width: 32px;
       height: 32px;

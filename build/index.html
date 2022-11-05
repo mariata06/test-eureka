@@ -107,7 +107,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="container"><span class="header__logo"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="220" height="45" alt="ЛогоПроцессинг24"></span>
-          <nav class="main-nav main-nav--top"><a class="main-nav__link main-nav__link--phone" href="tel:+74951234567">
+          <nav class="main-nav main-nav--top"><a class="main-nav__link link main-nav__link--phone" href="tel:+74951234567">
               <svg width="20" height="20" aria-hidden="true">
                 <use xlink:href="#icon-phone"></use>
               </svg>8 (495) 127-82-80</a><a class="main-nav__link btn btn--blue-bg" href="#">Напишите нам</a><a class="main-nav__link btn btn--blue-bg" href="#">
@@ -124,26 +124,26 @@
         <nav class="main-nav main-nav--bottom">
           <div class="container">
             <ul class="main-nav__list">
-              <li class="main-nav__item"><span class="main-nav__link is-active">Доставка топлива</span>
+              <li class="main-nav__item"><a class="main-nav__link link" href="#delivery">Доставка топлива</a>
               </li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">Топливные карты
+              <li class="main-nav__item"><a class="main-nav__link link" href="#cards">Топливные карты
                   <svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#icon-arrow"></use>
                   </svg></a>
               </li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">АЗС
+              <li class="main-nav__item"><a class="main-nav__link link" href="#azs">АЗС
                   <svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#icon-arrow"></use>
                   </svg></a>
               </li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">Цены на топливо</a>
+              <li class="main-nav__item"><a class="main-nav__link link" href="#price">Цены на топливо</a>
               </li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">О компании
+              <li class="main-nav__item"><a class="main-nav__link link" href="#company">О компании
                   <svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#icon-arrow"></use>
                   </svg></a>
               </li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a>
+              <li class="main-nav__item"><a class="main-nav__link link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -175,7 +175,7 @@
             </div>
           </div>
         </section>
-        <section class="price">
+        <section class="price" id="price">
           <div class="container">
             <h2 class="price__title title title--h2">Стоимость топлива</h2>
             <table class="price__table">
@@ -279,7 +279,7 @@
             </table>
           </div>
         </section>
-        <section class="delivery">
+        <section class="delivery" id="delivery">
           <div class="container">
             <h2 class="delivery__title title title--h2">Топливо с доставкой</h2>
             <div class="delivery__form form">
@@ -306,9 +306,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form__range-wrapper form__input-wrapper">
-                    <label for="name">Объем топлива</label>
-                    <input type="text" id="name" required placeholder="Иван">
+                  <div class="form__range-wrapper form__input-wrapper input-wrapper input-wrapper--slider range-slider">
+                    <label for="custom-slider">Объем топлива</label>
+                    <div class="range-slider__wrapper">
+                      <input class="range-slider__current-value" type="number" id="current-value" value="1670"><span>литров</span>
+                      <input class="custom-slider" type="range" id="custom-slider" value="1670" min="50" max="5000" step="1">
+                    </div>
                   </div>
                   <div class="form__input-wrapper">
                     <label for="address">Место доставки</label>
@@ -331,7 +334,7 @@
                     </tr>
                     <tr>
                       <td data-label="column-name">Стоимость топлива</td>
-                      <td>77 350.00 ₽</td>
+                      <td data-label="total-price"></td>
                     </tr>
                     <tr>
                       <td data-label="column-name">Цена за литр:
@@ -343,7 +346,7 @@
                       <td data-label="column-name">Выгода:
                         <p>При цене на АЗС  49.59 ₽  за литр, цены актуальны на  23.11.2020 г.</p>
                       </td>
-                      <td>6 953.00 ₽</td>
+                      <td data-label="profit"></td>
                     </tr>
                   </table>
                   <button class="form__submit btn btn--blue-bg" type="submit">Заказать топливо</button>
@@ -550,12 +553,12 @@
                   <div class="reviews__slider-slide swiper-slide">
                     <p class="reviews__author">Гусев Вячеслав</p>
                     <p class="reviews__post">Индивидуальный предприниматель</p>
-                    <p class="reviews__text">Velit, lectus sit urna tincidunt augue. Cursus vulputate pellentesque faucibus euismod. Diam pharetra, non, ut integer dui feugiat porttitor at. Non, dignissim enim viverra fringilla sit. Etiam justo a dignissim sociis vitae, nisi, justo, feugiat.</p><a class="reviews__slide-link" href="#">Подробнее</a>
+                    <p class="reviews__text">Velit, lectus sit urna tincidunt augue. Cursus vulputate pellentesque faucibus euismod. Diam pharetra, non, ut integer dui feugiat porttitor at. Non, dignissim enim viverra fringilla sit. Etiam justo a dignissim sociis vitae, nisi, justo, feugiat.</p><a class="reviews__slide-link link" href="#">Подробнее</a>
                   </div>
                   <div class="reviews__slider-slide swiper-slide">
                     <p class="reviews__author">Зеленов Евгений</p>
                     <p class="reviews__post">Гененеральный директор трансопртной компании</p>
-                    <p class="reviews__text">Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.</p><a class="reviews__slide-link" href="#">Подробнее</a>
+                    <p class="reviews__text">Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.</p><a class="reviews__slide-link link" href="#">Подробнее</a>
                   </div>
                 </div>
                 <div class="reviews__slider-nav">
@@ -577,7 +580,42 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="container"></div>
+        <div class="footer--top">
+          <div class="container">
+            <h2 class="footer__title title title--h2">Остались вопросы?</h2>
+            <p class="footer__paragraph">Готовы ответить на любой Ваш вопрос. Оставьте свой номер телефона и мы свяжемся&nbsp;с&nbsp;вами в ближайшее время</p>
+            <div class="footer__form form">
+              <form action="https://echo.htmlacademy.ru/" method="POST">
+                <div class="form__wrapper">
+                  <div class="form__input-wrapper">
+                    <label for="name2"></label>
+                    <input type="text" id="name2" required placeholder="Ваше имя">
+                  </div>
+                  <div class="form__input-wrapper">
+                    <label for="phone3"></label>
+                    <input type="tel" id="phone3" required placeholder="Номер телефона">
+                  </div>
+                  <button class="form__submit btn btn--blue-bg" type="submit">Перезвоните мне</button>
+                  <p class="footer__paragraph">Нажимая на кнопку &laquo;Перезвоните мне&raquo; я соглашаюсь с <a class="footer__link link" href="#">политикой конфиденциальности</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer--bottom">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__logo"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="220" height="45" alt="ЛогоПроцессинг24">
+              </div>
+              <div class="footer__copyright">&copy; 2019 ООО "Процессинг 24"</div>
+            </div>
+            <div class="footer__nav"><a class="footer__nav-link link" href="#azs">Карта АЗС</a><a class="footer__nav-link link" href="#contacts">Контакты</a><a class="footer__nav-link link" href="#byregion">АЗС по регионам</a><a class="footer__nav-link link" href="#company">О компании</a><a class="footer__nav-link link" href="#bybrends">АЗС по брендам</a><a class="footer__nav-link link" href="#account">Личный кабинет</a><a class="footer__nav-link link" href="#delivery">Доставка топлива</a>
+            </div><a class="footer__nav-link link footer__nav-link--phone" href="tel:+74951278170">8(495) 127-81-70<span>Отдел продаж</span></a>
+          </div>
+        </div>
+        <div class="footer__policy">
+          <div class="container"><a class="footer__policy-link link" href="#">Политика конфиденциальности</a></div>
+        </div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

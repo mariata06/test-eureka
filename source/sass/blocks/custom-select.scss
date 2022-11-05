@@ -8,6 +8,11 @@
   border: 1px solid $color-light-grey;
   background-color: $color-default-white;
   width: 100%;
+  transition: border $trans-default;
+
+  &:hover {
+    border: 1px solid rgba($color-default-black, 0.5);
+  }
 }
 
 .custom-select.is-active .custom-select__bottom {
@@ -59,8 +64,8 @@
 }
 
 .custom-select__current {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 17px;
   padding: 8px;
   display: flex;
   align-items: center;
@@ -85,8 +90,8 @@
   border-bottom: 1px solid $color-light-grey;
   height: 46px;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 17px;
   padding: 8px;
   transition: color $trans-default;
   display: flex;

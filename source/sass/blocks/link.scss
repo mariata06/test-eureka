@@ -1,0 +1,6 @@
+.link {
+  transition: opacity $trans-default;
+  &:hover {
+    opacity: 0.8;
+  }
+}

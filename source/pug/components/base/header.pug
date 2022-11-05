@@ -2,30 +2,30 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
+        href: "#delivery",
         text: "Доставка топлива",
       },
       {
-        href: "#",
+        href: "#cards",
         text: "Топливные карты",
         icon: true,
       },
       {
-        href: "#",
+        href: "#azs",
         text: "АЗС",
         icon: true,
       },
       {
-        href: "#",
+        href: "#price",
         text: "Цены на топливо",
       },
       {
-        href: "#",
+        href: "#company",
         text: "О компании",
         icon: true,
       },
       {
-        href: "#",
+        href: "#contacts",
         text: "Контакты",
       },
     ]
@@ -40,7 +40,7 @@ mixin header(headerMods, currentUrl)
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
       nav.main-nav.main-nav--top
-        a.main-nav__link.main-nav__link--phone(href="tel:+74951234567")
+        a.main-nav__link.link.main-nav__link--phone(href="tel:+74951234567")
           +icon("icon-phone", 20, 20)
           | 8 (495) 127-82-80
         a.main-nav__link.btn.btn--blue-bg(href="#") Напишите нам
@@ -57,9 +57,8 @@ mixin header(headerMods, currentUrl)
             li.main-nav__item
 
               if(activeState)
-                span.main-nav__link.is-active=link.text
+                span.main-nav__link.link.is-active=link.text
               else
-                a.main-nav__link(href=link.href)=link.text
+                a.main-nav__link.link(href=link.href)=link.text
                   if(link.icon)
                     +icon("icon-arrow", 20, 20)
-

@@ -1,3 +1,64 @@
 mixin footer(footerMods)
+
+  -
+    const footerLinks = [
+      {
+        href: "#azs",
+        text: "Карта АЗС",
+      },
+      {
+        href: "#contacts",
+        text: "Контакты",
+      },
+      {
+        href: "#byregion",
+        text: "АЗС по регионам",
+      },
+      {
+        href: "#company",
+        text: "О компании",
+      },
+      {
+        href: "#bybrends",
+        text: "АЗС по брендам",
+      },
+      {
+        href: "#account",
+        text: "Личный кабинет",
+      },
+      {
+        href: "#delivery",
+        text: "Доставка топлива",
+      },
+    ]
+
   footer.footer(class=footerMods)
-    .container
+      .footer--top
+        .container
+          h2.footer__title.title.title--h2 Остались вопросы?
+          p.footer__paragraph Готовы ответить на любой Ваш вопрос. Оставьте свой номер телефона и мы свяжемся&nbsp;с&nbsp;вами в ближайшее время
+          .footer__form.form
+            form(action="https://echo.htmlacademy.ru/" method="POST")
+              .form__wrapper
+                .form__input-wrapper
+                  label(for="name2")
+                  input(type="text" id="name2" required placeholder="Ваше имя")
+                .form__input-wrapper
+                  label(for="phone3")
+                  input(type="tel" id="phone3" required placeholder="Номер телефона")
+                button(type="submit").form__submit.btn.btn--blue-bg Перезвоните мне
+                p.footer__paragraph Нажимая на кнопку &laquo;Перезвоните мне&raquo; я соглашаюсь с <a class="footer__link link" href="#">политикой конфиденциальности</a>
+      .footer--bottom
+        .container
+          .footer__wrapper
+            .footer__logo
+              +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
+            .footer__copyright &copy; 2019 ООО "Процессинг 24"
+          .footer__nav
+            each link in footerLinks
+              a.footer__nav-link.link(href=link.href)=link.text
+          a.footer__nav-link.link.footer__nav-link--phone(href="tel:+74951278170") 8(495) 127-81-70
+            span Отдел продаж
+      .footer__policy
+        .container
+          a.footer__policy-link.link(href="#") Политика конфиденциальности

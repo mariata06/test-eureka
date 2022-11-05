@@ -35,6 +35,12 @@
     height: 46px;
     padding-left: 15px;
     border: 1px solid $color-light-grey;
+    transition: border $trans-default;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid rgba($color-default-black, 0.5);
+    }
   }
 }
 
@@ -47,6 +53,7 @@
   input[type="checkbox"] {
     margin-right: 16px;
     // visibility: hidden;
+    // cursor: pointer;
   }
 
   label {
@@ -59,7 +66,7 @@
     top: 0;
     left: 0;
     opacity: 0;
-    cursor: pointer;
+    // cursor: pointer;
     height: 0;
     width: 0;
     z-index: -1;
@@ -80,7 +87,14 @@
     width: 24px;
     height: 24px;
     border: 1px solid $color-light-grey;
-    // background-color: green;
+    cursor: pointer;
+    transition: border $trans-default;
+  }
+
+  input[type="checkbox"] + label:hover {
+    &:after {
+      border: 1px solid rgba($color-default-black, 0.5);
+    }
   }
 
   input[type="checkbox"]:checked + label::before {
@@ -91,6 +105,5 @@
     position: absolute;
     top: 0;
     left: 0;
-    // z-index: 1100;
   }
 }
