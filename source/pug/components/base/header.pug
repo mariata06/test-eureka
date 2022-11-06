@@ -33,7 +33,6 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .container
       if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo
           +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
       else

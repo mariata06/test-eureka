@@ -44,5 +44,5 @@ const start = gulp.series(build, syncServer);
 
 export { optimizeImages as imagemin, createWebp as webp, build, start };
 
-const path = require('path'); const ghPages = require('gulp-gh-pages');
-gulp.task('deploy', function() { return gulp.src('./build/**/*') .pipe(ghPages()); });
+// const path = require('path'); const ghPages = require('gulp-gh-pages');
+// gulp.task('deploy', function() { return gulp.src('./build/**/*') .pipe(ghPages()); });
