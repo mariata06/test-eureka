@@ -1,63 +1,24 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-// import {initCustomSelect} from './modules/form/init-custom-select';
-import {initFormValidate} from './modules/init-form-validate';
 import {initCertSlider} from './modules/init-cert-slider';
 import {initPartnersSlider} from './modules/init-partners-slider';
 import {initReviewSlider} from './modules/init-review-slider';
 import {initCustomSelect} from './modules/init-custom-select';
 import {initSmoothScroll} from './modules/init-smooth-scroll';
 import {initPriceRange} from './modules/init-price-range';
+import {initPhoneValidate} from './modules/init-phone-validate';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
-  iosVhFix();
   initCertSlider();
   initPartnersSlider();
   initReviewSlider();
   initSmoothScroll();
   initPriceRange();
+  initPhoneValidate('[name="phone"]');
 
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
-    // initCustomSelect();
-    initFormValidate();
-    // initPhoneValidate();
+
     initCustomSelect();
   });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используейтся matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

@@ -1,7 +1,25 @@
 .title {
-  &--h3 {
-    font-size: 36px;
-    line-height: 44px;
+  &--h1 {
+    font-size: 48px;
+    line-height: 59px;
     font-weight: 700px;
+  }
+
+  &--h2 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700px;
+  }
+
+  &--h3 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  &--h4 {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
   }
 }

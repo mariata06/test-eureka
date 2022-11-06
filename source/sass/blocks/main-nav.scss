@@ -1,6 +1,7 @@
 .main-nav {
   margin-left: auto;
   display: flex;
+  margin-top: 8px;
 
   &__list {
     display: flex;
@@ -14,7 +15,7 @@
   }
 
   &__item {
-    margin-right: 40px;
+    margin-right: 42px;
   }
 
   &__link--phone {
@@ -25,7 +26,6 @@
   }
 
   &__link {
-    color: $color-default-white;
     color: $color-default-black;
 
     display: flex;
@@ -40,37 +40,34 @@
     &.is-active {
       opacity: 0.6;
     }
-
-
   }
 
-  &__toggle {
-    display: none;
+  &--top {
+    margin-bottom: 8px;
+
+    .main-nav__link--phone {
+      color: $color-default-black;
+    }
   }
-}
 
-.main-nav--top {
-  padding-bottom: 16px;
+  &--bottom {
+    padding: 21px 0 19px;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: $color-snow;
 
-  .main-nav__link--phone {
-    color: $color-default-black;
-  }
-}
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
 
-.main-nav--bottom {
-  padding: 21px 0 19px;
-  margin-right: auto;
-  margin-left: 0;
-  background-color: $color-snow;
-
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 500;
-
-  .main-nav__link {
-    svg {
-      width: 20px;
-      height: 20px;
+    .main-nav__link {
+      letter-spacing: 1.2px;
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 0;
+        margin-left: 5px;
+      }
     }
   }
 }

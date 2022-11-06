@@ -19,7 +19,7 @@ const refresh = (done) => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,
@@ -43,3 +43,6 @@ const build = gulp.series(clean, svgo, copy, styles, sprite, js, pug);
 const start = gulp.series(build, syncServer);
 
 export { optimizeImages as imagemin, createWebp as webp, build, start };
+
+const path = require('path'); const ghPages = require('gulp-gh-pages');
+gulp.task('deploy', function() { return gulp.src('./build/**/*') .pipe(ghPages()); });

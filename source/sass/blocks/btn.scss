@@ -1,19 +1,13 @@
 .btn {
   display: inline-flex;
-  // padding: 10px 20px;
   padding: 0;
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
 
   &:disabled {
     opacity: 0.5;
@@ -53,10 +47,6 @@
     svg {
       transform: rotate(90deg);
     }
-
-    // &:after {
-    //   display: none;
-    // }
   }
 
   &--slide-next {
@@ -66,7 +56,15 @@
   }
 
   &--blue-bg {
-    padding: 14px 63px 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 13px 15px 13px;
+    min-width: 174px;
+    min-height: 46px;
     color: $color-default-white;
     background-color: $color-pacific-blue;
   }

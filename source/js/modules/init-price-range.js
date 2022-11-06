@@ -1,16 +1,14 @@
 const initPriceRange = () => {
+  let value = document.getElementById('current-value').value;
 
-  let value = event.target.value;
-  document.getElementById('current-value').value = value;
-  console.log(document.getElementById('current-value').value);
+  const fuelCost = "45.50";
+  const fuelFullCost = "49.59";
+
   function calculatePrice() {
-    const fuelCost = "45.50";
-    const fuelFullCost = "49.59";
-
-
     let totalPrice = (value * fuelCost).toFixed(2);
     let celTotalPrice = document.querySelector('[data-label="total-price"]');
     celTotalPrice.innerHTML = totalPrice;
+
     let fullPrice = value * fuelFullCost;
     let profit = (Math.round(fullPrice - totalPrice)).toFixed(2);
     let celProfit = document.querySelector('[data-label="profit"]');
@@ -18,40 +16,10 @@ const initPriceRange = () => {
   }
   calculatePrice();
 
-  // function calculatePrice() {
-    // const fuelCost = "45.50";
-    // const fuelFullCost = "49.59";
-    // let value = event.target.value;
-    // document.getElementById('current-value').value = value;
-
-    // let totalPrice = (value * fuelCost).toFixed(2);
-    // let celTotalPrice = document.querySelector('[data-label="total-price"]');
-    // celTotalPrice.innerHTML = totalPrice;
-
-    // let fullPrice = value * fuelFullCost;
-    // let profit = (Math.round(fullPrice - totalPrice)).toFixed(2);
-    // let celProfit = document.querySelector('[data-label="profit"]');
-    // celProfit.innerHTML = profit;
-  // }
   document.getElementById('custom-slider').addEventListener('input', function (event) {
-
+    value = event.target.value;
+    document.getElementById('current-value').value = value;
     calculatePrice();
-
-    // function calculatePrice() {
-    //   const fuelCost = "45.50";
-    //   const fuelFullCost = "49.59";
-    //   let value = event.target.value;
-    //   document.getElementById('current-value').value = value;
-
-    //   let totalPrice = (value * fuelCost).toFixed(2);
-    //   let celTotalPrice = document.querySelector('[data-label="total-price"]');
-    //   celTotalPrice.innerHTML = totalPrice;
-
-    //   let fullPrice = value * fuelFullCost;
-    //   let profit = (Math.round(fullPrice - totalPrice)).toFixed(2);
-    //   let celProfit = document.querySelector('[data-label="profit"]');
-    //   celProfit.innerHTML = profit;
-    // }
   });
 };
 

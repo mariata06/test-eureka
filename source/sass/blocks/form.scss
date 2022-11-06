@@ -1,0 +1,117 @@
+.form {
+  &__title {
+    margin: 0;
+    margin-bottom: 27px;
+
+    span {
+      color: $color-pacific-blue;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__submit {
+    align-self: flex-end;
+    width: 258px;
+  }
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 14px;
+  width: 276px;
+
+  label {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-matterhorn;
+  }
+
+  input {
+    color: $color-default-black;
+    outline: none;
+    height: 46px;
+    padding-left: 16px;
+    border: 1px solid $color-light-grey;
+    transition: border $trans-default;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid rgba($color-default-black, 0.5);
+    }
+  }
+}
+
+.form__checkbox-wrapper {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+
+  input[type="checkbox"] {
+    margin-right: 16px;
+  }
+
+  label {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    padding-left: 44px;
+    letter-spacing: 1px;
+  }
+
+  input[type="checkbox"] {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+  }
+
+  input[type="checkbox"] + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  input[type="checkbox"] + label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $color-light-grey;
+    cursor: pointer;
+    transition: border $trans-default;
+  }
+
+  input[type="checkbox"] + label:hover {
+    &:after {
+      border: 1px solid rgba($color-default-black, 0.5);
+    }
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    content: url("../img/sprite/icon-check.svg");
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    left: 3px;
+  }
+}

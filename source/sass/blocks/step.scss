@@ -1,28 +1,36 @@
 .step {
   width: 353px;
-  min-height: 394px;
+  min-height: 392px;
   background-color: $color-dark-cerullean;
   color: $color-default-white;
-  padding: 30px;
+  padding: 28px 30px 9px;
+
   &__icon-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
   }
 
   svg {
-    color: $color-default-white;
     fill: $color-default-white;
+    width: 64px;
+    height: 64px;
   }
 
   &__time {
     display: flex;
     flex-direction: column;
+    font-size: 16px;
+    line-height: 140%;
+
+    svg {
+      width: 59px;
+      height: 14px;
+      margin-top: 12px;
+    }
   }
 
   &__title {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 500;
     margin: 0;
     margin-bottom: 24px;
   }
@@ -30,8 +38,14 @@
   &__paragraph {
     margin: 0;
     margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+    &:nth-child(2n) {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+    }
   }
 }

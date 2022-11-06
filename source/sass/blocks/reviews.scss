@@ -1,66 +1,75 @@
 .reviews {
-  padding-top: 80px;
+  padding-top: 84px;
   padding-bottom: 80px;
   background-color: $color-snow;
-}
 
-.reviews__slider-slide {
-  width: 545px;
-  padding: 40px;
-  min-height: 368px;
-  background-color: $color-default-white;
-  margin-right: 30px;
-  display: flex;
-  flex-direction: column;
-}
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 
-.reviews__slider-container {
-  position: relative;
-  padding-top: 100px;
-}
+  &__slider-container {
+    position: relative;
+    padding-top: 32px;
+  }
 
-.reviews__author {
-  margin: 0;
-  margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 18.29px;
-  font-weight: 600;
-}
+  &__slider-slide {
+    width: 545px;
+    padding: 40px;
+    min-height: 368px;
+    background-color: $color-default-white;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.reviews__post {
-  margin: 0;
-  margin-bottom: 16px;
-  font-size: 12px;
-  line-height: 14.63px;
-  font-weight: 500;
-}
+  &__author {
+    margin: 0;
+    margin-bottom: 13px;
+    font-size: 15px;
+    line-height: 18.29px;
+    font-weight: 600;
+  }
 
-.reviews__text {
-  margin: 0;
-  margin-bottom: auto;
-  font-size: 16px;
-  line-height: 22.4px;
-}
+  &__post {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 14.63px;
+    font-weight: 500;
+    max-width: 246px;
+  }
 
-.reviews__slider-nav {
-  position: absolute;
-  height: 56px;
-  width: 128px;
-  display: flex;
-  justify-content: space-between;
-  top: 30px;
-  right: 0;
-}
+  &__text {
+    margin: 0;
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
 
-.reviews__slide-link {
-  color: $color-pacific-blue;
-  font-weight: 600;
-  margin-top: auto;
-  display: block;
-}
+  &__slider-nav {
+    position: absolute;
+    height: 56px;
+    width: 128px;
+    display: flex;
+    justify-content: space-between;
+    top: -49px;
+    right: 0;
+  }
 
-.reviews__btn-more {
-  margin: 0 auto;
-  margin-top: 50px;
-  display: block;
+  &__slide-link {
+    color: $color-pacific-blue;
+    font-size: 13px;
+    line-height: 15.85px;
+    font-weight: 600;
+    margin-top: auto;
+    display: block;
+  }
+
+  &__btn-more {
+    margin: 0 auto;
+    margin-top: 44px;
+    width: 258px;
+    display: block;
+  }
 }
